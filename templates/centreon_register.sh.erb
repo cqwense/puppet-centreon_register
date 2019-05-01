@@ -6,7 +6,7 @@ CENTREON_URL=<%= scope.lookupvar('centreon_webapi_host') %>:<%= scope.lookupvar(
 HOST_IP=<%= scope.lookupvar('ipaddress') %>
 HOST_ALIAS=<%= scope.lookupvar('host_alias') %>
 HOST_TEMPLATE=<%= scope.lookupvar('host_template') %>
-INSTANCE_NAME=<%= scope.lookupvar('host_pooler') %>
+INSTANCE_NAME=<%= scope.lookupvar('host_poller') %>
 HOST_NAME=<%= scope.lookupvar('hostname') %>
 MACRO_NAME=INTERFACE
 MACRO_VALUE=<%= @facts['networking']['primary'] %>

@@ -23,8 +23,8 @@
 # [*host_template*]
 # host template to use for this host
 #
-# [*host_pooler*]
-# Which pooler should be use for this host
+# [*host_poller*]
+# Which poller should be use for this host
 #
 # [*host_state*]
 # Can be enabled or disabled. Disabled host won't be monitoring
@@ -44,7 +44,7 @@ class centreon_register (
   Optional[String] $host_alias     = undef,
   Optional[String] $host_template  = undef,
   Optional[String] $ipaddress      = $::ipaddress
-  String $host_pooler              = 'Central',
+  String $host_poller              = 'Central',
   String $host_state               = 'enabled',
   Optional[String] $host_group     = '',
   String $script_path              = '/tmp',
