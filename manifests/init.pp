@@ -40,12 +40,15 @@ class centreon_register (
   String $centreon_webapi_port     = '80',
   String $centreon_login           = 'admin',
   String $centreon_password        = 'p4ssw0rd',
+  Optional[String] $hostname       = $::hostname
   Optional[String] $host_alias     = undef,
   Optional[String] $host_template  = undef,
+  Optional[String] $ipaddress      = $::ipaddress
   String $host_pooler              = 'Central',
   String $host_state               = 'enabled',
   Optional[String] $host_group     = '',
   String $script_path              = '/tmp',
+
 ) {
 
 
