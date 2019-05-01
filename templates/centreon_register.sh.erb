@@ -1,10 +1,8 @@
 #!/bin/bash
 # FILE MANAGED BY PUPPET
 LOGIN=<%= scope.lookupvar('centreon_register::centreon_login') %>
-PASSWORD=<%= scope.lookupvar('centreon_register::centreon_password %>
-CENTREON_HOST=<%= scope.lookupvar('centreon_register::centreon_webapi_host')
-CENTREON_HOST_PORT=<% scope.lookupvar('centreon_register::centreon_webapi_port')
-CENTREON_URL="${CENTREON_HOST}:${CENTREON_HOST_PORT}"
+PASSWORD=<%= scope.lookupvar('centreon_register::centreon_password') %>
+CENTREON_URL=<%= scope.lookupvar('centreon_register::centreon_webapi_host') %>:<%= scope.lookupvar('centreon_register::centreon_webapi_port') %>
 HOST_IP=<%= scope.lookupvar('centreon_register::ipaddress') %>
 HOST_ALIAS=<%= scope.lookupvar('centreon_register::host_alias') %>
 HOST_TEMPLATE=<%= scope.lookupvar('centreon_register::host_template') %>
